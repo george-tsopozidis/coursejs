@@ -26,6 +26,14 @@
       "eslint --cache --fix"
     ]
   },
+  "proxy": {
+    "/projects/functions": {
+      "target": "http://localhost:8080",
+      "pathRewrite": {
+        "^/projects": ""
+      }
+    }
+  },
   "dependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.10.4",
